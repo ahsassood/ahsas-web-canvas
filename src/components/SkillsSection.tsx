@@ -75,7 +75,7 @@ const SkillsSection = () => {
   }, []);
 
   return (
-    <section id="skills" className="section-container bg-navy-light py-24">
+    <section id="skills" className="section-container bg-avy-light py-24">
       <div 
         ref={sectionRef} 
         className="opacity-0 translate-y-10 transition-all duration-700"

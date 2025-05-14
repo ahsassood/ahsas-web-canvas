@@ -63,7 +63,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="section-container bg-navy text-white">
+    <section id="contact" className="section-container bg-avy-light text-white">
       <div 
         ref={sectionRef} 
         className="opacity-0 translate-y-10 transition-all duration-700"
