@@ -1,7 +1,7 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Mail, Github, Linkedin, Twitter, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const [formState, setFormState] = useState({
@@ -12,6 +12,7 @@ const ContactSection = () => {
   const [submitting, setSubmitting] = useState(false);
   const { toast } = useToast();
   const sectionRef = useRef<HTMLDivElement>(null);
+  const form = useRef<HTMLFormElement>(null);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -43,23 +44,40 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setSubmitting(false);
-      setFormState({
-        name: '',
-        email: '',
-        message: '',
-      });
+
+    try {
+      // Replace these with your actual EmailJS credentials
+      const serviceId = 'service_m7q0olz';
+      const templateId = 'template_gbrkaru';
+      const publicKey = 'iSlsYj2t2TRikOIFk';
+
+      if (form.current) {
+        await emailjs.sendForm(serviceId, templateId, form.current, publicKey);
+        
+        setFormState({
+          name: '',
+          email: '',
+          message: '',
+        });
+        
+        toast({
+          title: "Message sent!",
+          description: "Thanks for reaching out. I'll get back to you soon.",
+        });
+      }
+    } catch (error) {
       toast({
-        title: "Message sent!",
-        description: "Thanks for reaching out. I'll get back to you soon.",
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
       });
-    }, 1500);
+      console.error('Failed to send email:', error);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -86,7 +104,7 @@ const ContactSection = () => {
                 <Mail className="h-6 w-6" />
               </a>
               <a 
-                href="https://github.com" 
+                href="https://github.com/ahsassood/ahsas-web-canvas" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white hover:text-cyan transition-colors"
@@ -103,7 +121,7 @@ const ContactSection = () => {
               >
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a 
+              {/* <a 
                 href="https://twitter.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -111,11 +129,11 @@ const ContactSection = () => {
                 aria-label="Twitter"
               >
                 <Twitter className="h-6 w-6" />
-              </a>
+              </a> */}
             </div>
           </div>
           
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form ref={form} onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-1">
                 Name

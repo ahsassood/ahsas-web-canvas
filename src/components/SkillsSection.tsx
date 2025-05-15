@@ -11,28 +11,34 @@ type Skill = {
 const skills: Skill[] = [
   // Frontend
   { name: 'React', level: 90, category: 'frontend' },
+  { name: 'Angular', level: 90, category: 'frontend' },
   { name: 'TypeScript', level: 85, category: 'frontend' },
+  { name: 'Javascript', level: 85, category: 'frontend' },
   { name: 'HTML/CSS', level: 95, category: 'frontend' },
   { name: 'Tailwind CSS', level: 90, category: 'frontend' },
   { name: 'Next.js', level: 80, category: 'frontend' },
   
   // Backend
+  { name: 'Java', level: 65, category: 'backend' },
+  { name: 'Spring Boot', level: 65, category: 'backend' },
   { name: 'Node.js', level: 85, category: 'backend' },
   { name: 'Express', level: 80, category: 'backend' },
+  { name: 'PostgreSQL', level: 65, category: 'backend' },
   { name: 'MongoDB', level: 75, category: 'backend' },
   { name: 'SQL', level: 70, category: 'backend' },
-  { name: 'GraphQL', level: 65, category: 'backend' },
+  
   
   // Tools
   { name: 'Git', level: 90, category: 'tools' },
-  { name: 'Docker', level: 70, category: 'tools' },
-  { name: 'AWS', level: 60, category: 'tools' },
+  { name: 'AWS', level: 75, category: 'tools' },
   { name: 'CI/CD', level: 75, category: 'tools' },
   
   // Languages
+  { name: 'Java', level: 100, category: 'languages' },
+  { name: 'C++', level: 100, category: 'languages' },
   { name: 'JavaScript', level: 95, category: 'languages' },
+  { name: 'TypeScript', level: 95, category: 'languages' },
   { name: 'Python', level: 70, category: 'languages' },
-  { name: 'Java', level: 60, category: 'languages' },
 ];
 
 const SkillsSection = () => {

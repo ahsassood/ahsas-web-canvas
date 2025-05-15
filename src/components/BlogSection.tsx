@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -14,24 +13,24 @@ type BlogPost = {
 const blogPosts: BlogPost[] = [
   {
     id: '1',
-    title: 'How to Build Accessible React Components',
-    excerpt: 'Learn best practices for creating web components that everyone can use, regardless of ability.',
-    date: 'May 10, 2023',
-    categories: ['React', 'Accessibility'],
+    title: 'Public Health Facilities in Udaipur, Rajasthan',
+    excerpt: 'Report for surveys conducted with Jean Dreze and Reetika Khera for gauging the quality of public health infrastructure.',
+    date: 'November, 2020',
+    categories: ['Public Health'],
   },
   {
     id: '2',
-    title: 'Understanding TypeScript Generics',
-    excerpt: 'A deep dive into TypeScript generics and how they can make your code more reusable.',
-    date: 'April 2, 2023',
-    categories: ['TypeScript', 'Programming'],
+    title: 'Raising Engineers and Housewives',
+    excerpt: 'A deep dive into how society has a strongly typed gendered approach to raising kids.',
+    date: 'Jan, 2021',
+    categories: ['Gender Equality'],
   },
   {
     id: '3',
-    title: 'Setting Up a Modern Frontend Development Workflow',
-    excerpt: 'Tips and tools to improve your development process and boost productivity.',
-    date: 'March 15, 2023',
-    categories: ['Tooling', 'Productivity'],
+    title: 'Book Review: Ain’t I a Woman? Black Women and Feminism by bell hooks',
+    excerpt: 'bell hooks sheds light on the life of the black woman in America in the 19th and 20th centuries',
+    date: 'September, 2021',
+    categories: ['Feminism'],
   },
 ];
 
@@ -61,13 +60,25 @@ const BlogSection = () => {
   }, []);
 
   return (
-    <section className="section-container">
+    <section id="blog" className="section-container relative">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url(/src/resources/a4.JPG)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.6,
+        }}
+      />
+      
       <div 
         ref={sectionRef} 
-        className="opacity-0 translate-y-10 transition-all duration-700"
+        className="opacity-0 translate-y-10 transition-all duration-700 relative z-10"
       >
         <div className="flex justify-between items-center mb-12">
-          <h2 className="section-title">Latest from the Blog</h2>
+          <h2 className="section-title">Blogs</h2>
           <Link 
             to="/blog" 
             className="group flex items-center text-navy hover:text-cyan transition-colors"

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -11,7 +10,7 @@ type Project = {
   liveLink?: string;
   image: string;
   featured: boolean;
-  category: 'frontend' | 'fullstack' | 'backend' | 'other';
+  category: 'frontend' | 'fullstack' | 'android';
 };
 
 const projects: Project[] = [
@@ -19,60 +18,50 @@ const projects: Project[] = [
     title: 'Portfolio Website',
     description: 'A personal portfolio website built with React and Tailwind CSS showcasing projects and skills.',
     technologies: ['React', 'Typescript', 'Tailwind CSS', 'Framer Motion'],
-    github: '#',
-    liveLink: '#',
-    image: 'placeholder.svg',
+    github: 'https://github.com/ahsassood/ahsas-web-canvas',
+    // liveLink: '#',
+    image: 'src/resources/portfolio.png',
     featured: true,
     category: 'frontend',
   },
   {
-    title: 'E-commerce Dashboard',
-    description: 'A comprehensive dashboard for e-commerce analytics with real-time data visualization.',
-    technologies: ['Next.js', 'Redux', 'Node.js', 'MongoDB', 'Recharts'],
-    github: '#',
-    liveLink: '#',
-    image: 'placeholder.svg',
+    title: 'Janmanrega Android App',
+    description: 'The official app for NREGA that allows beneficiaries to check their attendance, payments and more.',
+    technologies: ['Android SDK', 'Java', 'Spring Boot', 'MySQL', 'RESTsul APIs'],
+    // github: '#',
+    liveLink: 'https://play.google.com/store/apps/details?id=nic.hp.ccmgnrega&hl=en_IN',
+    image: 'src/resources/janman.jpg',
     featured: true,
+    category: 'android',
+  },
+  {
+    title: 'Bill Tracking And Data Access Portal',
+    description: 'Digitizes bills and allows users to access bill data.',
+    technologies: ['Node.js', 'React', 'Typescript', 'Java', 'Spring Boot', 'PostgreSQL'],
+    github: 'https://github.com/ahsassood/ocr-ui',
+    image: 'placeholder.svg',
+    featured: false,
     category: 'fullstack',
   },
   {
-    title: 'Task Management API',
-    description: 'RESTful API for task management with authentication and authorization.',
-    technologies: ['Node.js', 'Express', 'MongoDB', 'JWT'],
-    github: '#',
-    image: 'placeholder.svg',
+    title: 'Admissions Portal',
+    description: 'An application for accepting student applications, managing student placements for Social Welfare school and colleges in Telanga.',
+    technologies: ['Angular', 'Java', 'Spring Boot'],
+    github: 'https://github.com/ahsassood/admissionPortalUi',
+    // liveLink: '#',
+    image: 'src/resources/admissions.png',
     featured: false,
-    category: 'backend',
+    category: 'fullstack',
   },
   {
-    title: 'Weather App',
-    description: 'A weather application that provides current weather and forecast data based on location.',
-    technologies: ['React', 'OpenWeather API', 'CSS Modules'],
-    github: '#',
-    liveLink: '#',
-    image: 'placeholder.svg',
-    featured: false,
+    title: 'Batch Auto-Diagnosis and Remediation Dashboard',
+    description: 'A dashboard that reflects status of batch processing of successful, failed and remedied processes.',
+    technologies: ['React', 'HTML', 'CSS'],
+    github: 'https://github.com/ahsassood/AutoBatchDetectionAndRecoveryUI',
+    // liveLink: '#',
+    image: 'src/resources/batch.png',
+    featured: true,
     category: 'frontend',
-  },
-  {
-    title: 'Blog Platform',
-    description: 'A full-stack blog platform with authentication, markdown support, and comment system.',
-    technologies: ['Next.js', 'Prisma', 'PostgreSQL', 'NextAuth.js'],
-    github: '#',
-    liveLink: '#',
-    image: 'placeholder.svg',
-    featured: true,
-    category: 'fullstack',
-  },
-  {
-    title: 'Real-time Chat Application',
-    description: 'A chat application with real-time messaging, user presence, and message history.',
-    technologies: ['React', 'Socket.io', 'Node.js', 'Express', 'MongoDB'],
-    github: '#',
-    liveLink: '#',
-    image: 'placeholder.svg',
-    featured: false,
-    category: 'fullstack',
   },
 ];
 
@@ -83,10 +72,10 @@ const ProjectsSection = () => {
   
   const filterOptions = [
     { value: 'all', label: 'All Projects' },
-    { value: 'featured', label: 'Featured' },
+    // { value: 'featured', label: 'Featured' },
     { value: 'frontend', label: 'Frontend' },
     { value: 'fullstack', label: 'Full Stack' },
-    { value: 'backend', label: 'Backend' },
+    { value: 'android', label: 'Android' },
   ];
   
   useEffect(() => {
@@ -122,10 +111,22 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <section id="projects" className="section-container">
+    <section id="projects" className="section-container relative">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url(/src/resources/a3.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.6
+        }}
+      />
+      
       <div 
         ref={sectionRef} 
-        className="opacity-0 translate-y-10 transition-all duration-700"
+        className="opacity-0 translate-y-10 transition-all duration-700 relative z-10"
       >
         <h2 className="section-title">Projects</h2>
         

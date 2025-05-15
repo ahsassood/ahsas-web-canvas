@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import AnimatedText from './AnimatedText';
 import { ArrowRight } from 'lucide-react';
@@ -11,8 +10,21 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center pt-16 pb-24 section-container">
-      <div className="w-full max-w-4xl">
+    <section className="min-h-screen flex items-center pt-16 pb-24 section-container relative">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url(/src/resources/a2.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.3
+        }}
+      />
+      
+      {/* Content */}
+      <div className="w-full max-w-4xl relative z-10">
         <div className={`transition-opacity duration-1000 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
           <p className="text-cyan mb-6 font-mono">Hi, my name is</p>
           
@@ -32,7 +44,7 @@ const HeroSection = () => {
           
           <p className="text-lg text-navy/60 max-w-2xl mb-12 animate-fade-in" style={{animationDelay: '2.5s', opacity: 0, animationFillMode: 'forwards'}}>
             I'm a full-stack web developer specializing in building exceptional digital experiences.
-            Currently focused on building accessible, user-friendly applications with modern web technologies.
+            Currently focused on building accessible, user-friendly applications with modern web technologies for social good.
           </p>
 
           <div className="animate-fade-in" style={{animationDelay: '3s', opacity: 0, animationFillMode: 'forwards'}}>
