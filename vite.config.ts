@@ -15,6 +15,16 @@ export default defineConfig(({ mode }) => ({
     componentTagger(),
   ].filter(Boolean),
   base: '/ahsas-web-canvas/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

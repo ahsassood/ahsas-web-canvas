@@ -20,7 +20,7 @@ const projects: Project[] = [
     technologies: ['React', 'Typescript', 'Tailwind CSS', 'Framer Motion'],
     github: 'https://github.com/ahsassood/ahsas-web-canvas',
     // liveLink: '#',
-    image: 'src/resources/portfolio.png',
+    image: '/ahsas-web-canvas/images/portfolio.png',
     featured: true,
     category: 'frontend',
   },
@@ -30,7 +30,7 @@ const projects: Project[] = [
     technologies: ['Android SDK', 'Java', 'Spring Boot', 'MySQL', 'RESTsul APIs'],
     // github: '#',
     liveLink: 'https://play.google.com/store/apps/details?id=nic.hp.ccmgnrega&hl=en_IN',
-    image: 'src/resources/janman.jpg',
+    image: '/ahsas-web-canvas/images/janman.jpg',
     featured: true,
     category: 'android',
   },
@@ -39,17 +39,17 @@ const projects: Project[] = [
     description: 'Digitizes bills and allows users to access bill data.',
     technologies: ['Node.js', 'React', 'Typescript', 'Java', 'Spring Boot', 'PostgreSQL'],
     github: 'https://github.com/ahsassood/ocr-ui',
-    image: 'placeholder.svg',
+    image: '/ahsas-web-canvas/images/batch.png',
     featured: false,
     category: 'fullstack',
   },
   {
     title: 'Admissions Portal',
     description: 'An application for accepting student applications, managing student placements for Social Welfare school and colleges in Telanga.',
-    technologies: ['Angular', 'Java', 'Spring Boot'],
+    technologies: ['React', 'Java', 'Spring Boot'],
     github: 'https://github.com/ahsassood/admissionPortalUi',
     // liveLink: '#',
-    image: 'src/resources/admissions.png',
+    image: '/ahsas-web-canvas/images/admissions.png',
     featured: false,
     category: 'fullstack',
   },
@@ -59,7 +59,7 @@ const projects: Project[] = [
     technologies: ['React', 'HTML', 'CSS'],
     github: 'https://github.com/ahsassood/AutoBatchDetectionAndRecoveryUI',
     // liveLink: '#',
-    image: 'src/resources/batch.png',
+    image: '/ahsas-web-canvas/images/batch.png',
     featured: true,
     category: 'frontend',
   },
@@ -116,11 +116,11 @@ const ProjectsSection = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url(/src/resources/a3.jpg)',
+          backgroundImage: 'url(/ahsas-web-canvas/images/a3.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: 0.6
+          opacity: 0.7
         }}
       />
       

@@ -125,7 +125,7 @@ const ResumeSection = () => {
         
         <div className="mt-16 flex flex-col sm:flex-row items-center gap-6 justify-center animate-fade-in" style={{animationDelay: '600ms'}}>
           <a 
-            href="/src/resources/Ahsas Sood - Resume.pdf" 
+            href="/ahsas-web-canvas/Ahsas Sood - Resume.pdf" 
             download="Ahsas_Sood_Resume.pdf"
             className="btn btn-primary flex items-center"
             aria-label="Download resume"

@@ -65,7 +65,7 @@ const BlogSection = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url(/src/resources/a4.JPG)',
+          backgroundImage: 'url(/ahsas-web-canvas/images/a4.JPG)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

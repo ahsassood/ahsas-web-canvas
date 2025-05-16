@@ -56,7 +56,7 @@ const AboutSection = () => {
             <div className="w-64 h-64 bg-cyan/20 rounded-md absolute -right-4 -bottom-4 group-hover:-right-2 group-hover:-bottom-2 transition-all duration-300"></div>
             <div className="w-64 h-64 relative rounded-md overflow-hidden border-2 border-cyan">
               <img 
-                src="/src/resources/a1.JPG"
+                src="/ahsas-web-canvas/images/a1.JPG"
                 alt="Ahsas Sood"
                 className="w-full h-full object-cover"
               />

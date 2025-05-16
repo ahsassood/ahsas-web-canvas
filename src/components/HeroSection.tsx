@@ -15,11 +15,11 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url(/src/resources/a2.jpg)',
+          backgroundImage: 'url(/ahsas-web-canvas/images/a2.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: 0.3
+          opacity: 0.15
         }}
       />
       
