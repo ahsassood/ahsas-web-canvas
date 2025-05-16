@@ -14,16 +14,16 @@ type Project = {
 };
 
 const projects: Project[] = [
-  {
-    title: 'Portfolio Website',
-    description: 'A personal portfolio website built with React and Tailwind CSS showcasing projects and skills.',
-    technologies: ['React', 'Typescript', 'Tailwind CSS', 'Framer Motion'],
-    github: 'https://github.com/ahsassood/ahsas-web-canvas',
-    // liveLink: '#',
-    image: '/ahsas-web-canvas/images/portfolio.png',
-    featured: true,
-    category: 'frontend',
-  },
+  // {
+  //   title: 'Portfolio Website',
+  //   description: 'A personal portfolio website built with React and Tailwind CSS showcasing projects and skills.',
+  //   technologies: ['React', 'Typescript', 'Tailwind CSS', 'Framer Motion'],
+  //   github: 'https://github.com/ahsassood/ahsas-web-canvas',
+  //   // liveLink: '#',
+  //   image: '/ahsas-web-canvas/images/portfolio.png',
+  //   featured: true,
+  //   category: 'frontend',
+  // },
   {
     title: 'Janmanrega Android App',
     description: 'The official app for NREGA that allows beneficiaries to check their attendance, payments and more.',
