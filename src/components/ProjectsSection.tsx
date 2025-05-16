@@ -39,7 +39,7 @@ const projects: Project[] = [
     description: 'Digitizes bills and allows users to access bill data.',
     technologies: ['Node.js', 'React', 'Typescript', 'Java', 'Spring Boot', 'PostgreSQL'],
     github: 'https://github.com/ahsassood/ocr-ui',
-    image: '/ahsas-web-canvas/images/batch.png',
+    image: '/ahsas-web-canvas/images/bill.jpg',
     featured: false,
     category: 'fullstack',
   },
